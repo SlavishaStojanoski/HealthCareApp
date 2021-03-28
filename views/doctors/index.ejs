@@ -1,0 +1,21 @@
+<a href="/doctors/create" class="btn btn-primary">Add</a>
+<table class="table table-success table-striped">
+    <thead>
+        <tr>
+          <th scope="col">Licence No.</th>
+          <th scope="col">Name</th>
+          <th scope="col">Specialization</th>
+          <th scope="col">City</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% doctors.forEach(doctor => { %>
+          <tr>
+            <td scope="col"><%= doctor.licence_number %></td>
+            <td scope="col"><%= doctor.full_name %></td>
+            <td scope="col"><%= doctor.specialization %></td>
+            <td scope="col"><%= doctor.city %></td>
+          </tr> 
+        <% }) %>
+      </tbody>
+</table>
