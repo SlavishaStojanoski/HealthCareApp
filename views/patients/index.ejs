@@ -1,0 +1,29 @@
+<h1 class="header">Patients</h1>
+<div class="styleTable">
+<table class="table table-success table-striped styleTable">
+    <thead>
+        <tr>
+          <th scope="col">Patient No.</th>
+          <th scope="col">Name</th>
+          <th scope="col">City</th>
+          <th scope="col">Diagnose</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% patients.forEach(patient => { %>
+            <tr>
+                <td scope="col"><%= patient.patient_num %></td>
+                <td scope="col"><%= patient.patient_name %></td>
+                <td scope="col"><%= patient.patient_city %></td>
+                <td scope="col"><%= patient.diagnose %></td>
+                <td>
+                  <a href="/patients/create" class="btn btn-primary btnStyle">Add</a>
+                  <a href="/patients/<%= patient._id %>" class="btn btn-secondary btnStyle">Update</a>
+                </td>
+            </tr>
+        <% }) %>
+        </tr>
+      </tbody>
+</table>
+</div>

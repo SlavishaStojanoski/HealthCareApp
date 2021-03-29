@@ -1,0 +1,29 @@
+<% if (typeof error != 'undefined') { %>
+    <div class="alert alert-danger" role="alert">
+      <%- error %>
+    </div>
+  <% } %>
+<form action="/patients" method="POST" >
+    <div class="mb-3">
+        <label for="patient_name" class="form-label">Patient Name</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" name="patient_name"
+            value="<%= typeof patient_name != 'undefined' ? patient_name : '' %>">
+    </div>
+    <div class="mb-3">
+        <label for="patient_num" class="form-label">Patient Number</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" name="patient_num"
+            value="<%= typeof patient_num != 'undefined' ? patient_num : '' %>">
+    </div>
+    <div class="mb-3">
+        <label for="patient_city" class="form-label">City</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" name="patient_city"
+            value="<%= typeof patient_city != 'undefined' ? patient_city : '' %>">
+    </div>
+    <div class="mb-3">
+        <label for="diagnose" class="form-label">diagnose</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" name="diagnose"
+            value="<%= typeof diagnose != 'undefined' ? diagnose : '' %>">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

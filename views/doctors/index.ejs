@@ -1,4 +1,5 @@
-<a href="/doctors/create" class="btn btn-primary">Add</a>
+<h1 class="header">Doctors</h1>
+<div class="styleTable">
 <table class="table table-success table-striped">
     <thead>
         <tr>
@@ -6,6 +7,7 @@
           <th scope="col">Name</th>
           <th scope="col">Specialization</th>
           <th scope="col">City</th>
+          <th scope="col">Action</th>
         </tr>
       </thead>
       <tbody>
@@ -15,7 +17,12 @@
             <td scope="col"><%= doctor.full_name %></td>
             <td scope="col"><%= doctor.specialization %></td>
             <td scope="col"><%= doctor.city %></td>
+            <td>
+              <a href="/doctors/create" class="btn btn-primary btnStyle">Add</a>
+              <a href="/doctors/<%= doctor._id %>" class="btn btn-secondary btnStyle">Update</a>
+            </td>
           </tr> 
         <% }) %>
       </tbody>
 </table>
+</div>
