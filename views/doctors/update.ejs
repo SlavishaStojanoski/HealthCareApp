@@ -1,30 +1,30 @@
 <% if (typeof error != 'undefined') { %>
-    <div class="alert alert-danger" role="alert">
+    <div class="alert alert-danger alertStyle" role="alert">
       <%- error %>
     </div>
   <% } %>
-  
+  <h1 class="header">Update Doctor's Data</h1>
   <form action="/doctors/<%= _id %>" method="POST" >
       <div class="mb-3">
         <label for="full_name" class="form-label">Full Name</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" name="full_name" 
+        <input type="text" class="form-control" id="full_name" name="full_name" 
             value="<%= full_name %>">
       </div>
       <div class="mb-3">
         <label for="licence_number" class="form-label">Licence Number</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" name="licence_number"
+        <input type="text" class="form-control" id="licence_number" name="licence_number"
             value="<%= licence_number %>">
       </div>
       <div class="mb-3">
         <label for="city" class="form-label">City</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" name="city"
+        <input type="text" class="form-control" id="city" name="city"
             value="<%= city %>">
       </div>
       <div class="mb-3">
         <label for="specialization" class="form-label">Specialization</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" name="specialization"
+        <input type="text" class="form-control" id="specialization" name="specialization"
             value="<%= specialization %>">
       </div>
       
-      <button type="submit" class="btn btn-primary">Update</button>
+      <button type="submit" class="btn btn-primary btnStyle">Update</button>
     </form>

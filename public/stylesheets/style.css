@@ -20,12 +20,17 @@ body {
 }
 
 .logo {
+  background-image: url('../images/logo.jpg');
+  background-size: cover;
   width: 59px;
+  height: 59px;
   margin-left: 35px;
   cursor: pointer;
+  display: inline-block;
 }
-.LogoPart {
-  color: red;
+
+.logoHover:hover {
+  background: none;
 }
 
 nav ul {
@@ -64,12 +69,14 @@ a:hover {
   display: none;
 }
 
+/* CSS for Phone or Tablet */
 @media (max-width: 980px) {
   nav ul li a {
       font-size:0.9em
   }
 }
 
+/* CSS for Phone or Tablet */
 @media (max-width: 840px) {
   .checkbtn {
       display: block;
@@ -99,14 +106,19 @@ a:hover {
   }
 }
 
+/* CSS for Content in page */
 .header {
-  margin-top: 100px;
+  margin-top: 70px;
   font-family:'Times New Roman', Times, serif;
   color: #be4e4e;
   text-align: center;
 }
 
 .styleTable {
+  text-align: center;
+}
+
+.styleTableDiv {
   padding: 50px;
 }
 .styleTable table {
@@ -116,4 +128,9 @@ a:hover {
 .btnStyle {
   border: none;
   border-radius: 25px;
+}
+
+.alertStyle {
+  margin-top: 60px;
+  margin-bottom: -40px;
 }

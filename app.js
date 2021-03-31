@@ -6,6 +6,7 @@ var mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/healthcareapp', {useNewUrlParser: true, useUnifiedTopology: true});
 var indexRouter = require('./routes/index');
+const { resolveSoa } = require('dns');
 
 var app = express();
 
@@ -18,6 +19,7 @@ app.set('layout', './layouts/index')
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
+
 
 app.use('/', indexRouter);
 

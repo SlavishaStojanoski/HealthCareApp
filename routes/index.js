@@ -87,5 +87,25 @@ router
       })
     }
   })
+
+// Delete Routes...
+//Doctors
+  .delete('/doctors/:id', async(req, res) => {
+    await Doctor.findByIdAndRemove(req.params.id)
+    res.send({
+      error: false,
+      message: `Doctor with id ${req.params.id} removed`
+    })
+  })
+//Patient
+.delete('/patients/:id', async(req, res) =>{
+  await Patient.findByIdAndRemove(req.params.id)
+  res.send({
+    error:false,
+    message: `Patient with id ${req.params.id} removed`
+  })
+})
+
+
     
 module.exports = router;

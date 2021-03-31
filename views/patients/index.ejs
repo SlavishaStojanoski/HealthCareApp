@@ -1,5 +1,5 @@
 <h1 class="header">Patients</h1>
-<div class="styleTable">
+<div class="styleTableDiv">
 <table class="table table-success table-striped styleTable">
     <thead>
         <tr>
@@ -20,6 +20,7 @@
                 <td>
                   <a href="/patients/create" class="btn btn-primary btnStyle">Add</a>
                   <a href="/patients/<%= patient._id %>" class="btn btn-secondary btnStyle">Update</a>
+                  <button type="button" onclick="deletePatient(`<%= patient._id %>`)" class="btn btn-danger btnStyle">Delete</button>
                 </td>
             </tr>
         <% }) %>

@@ -3,11 +3,11 @@ const mongoose = require('mongoose')
 const patientSchema = mongoose.Schema({
     patient_name: {
         type:String,
-        require: ['Patient name is a required field']
+        required: ['Patient name is a required field']
     },
     patient_num: {
         type:String,
-        require: ['Patient number is a required field'],
+        required: ['Patient number is a required field'],
         unique: true,
         validate: {
             validator: (value) => {
@@ -18,11 +18,11 @@ const patientSchema = mongoose.Schema({
     },
     patient_city: {
         type: String,
-        require: ['City is required field']
+        required: ['City is required field']
     },
     diagnose: {
         type: String,
-        require: ['Specialization is a required field']
+        required: ['Specialization is a required field']
     }
 })
 
